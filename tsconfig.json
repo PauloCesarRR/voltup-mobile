@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "es6",
+      "es2017",
+      "es2018",
+      "es2019",
+      "es2020"
+    ],
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "jsx": "react-native",
+    "moduleResolution": "node",
+    "rootDir": "./",
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationDir": "./dist/types"
+  },
+  "extends": "expo/tsconfig.base"
+}
