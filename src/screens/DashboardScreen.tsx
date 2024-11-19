@@ -5,8 +5,9 @@ import Footer from '../components/Footer';
 
 interface Stations {
   id: number;
-  : string;
-  value: number;
+  endereco: string;
+  tipoConector: string;
+  nome: string;
 }
 
 const Dashboard: React.FC = () => {
@@ -18,8 +19,9 @@ const Dashboard: React.FC = () => {
 
   const renderItem = ({ item }: { item: Stations }) => (
     <View style={styles.item}>
-      <Text style={styles.itemValue}>{item.title}</Text>
-      <Text style={styles.itemValue}>{item.value}</Text>
+      <Text style={styles.itemValue}>{item.nome}</Text>
+      <Text style={styles.itemValue}>{item.tipoConector}</Text>
+      <Text style={styles.itemValue}>{item.endereco}</Text>
     </View>
   );
 
