@@ -8,6 +8,7 @@ import Register from './src/screens/UserRegister';
 import Dashboard from './src/screens/DashboardScreen';
 import VehicleRegister from './src/screens/VehicleRegister';
 import VehicleList from './src/screens/VehicleList';
+import Footer from './src/components/Footer';
 
 
 const Stack = createNativeStackNavigator();

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, TextInput, Button, View } from 'react-native';
+import { StyleSheet, Text, TextInput, Button, View, TouchableOpacity, Image } from 'react-native';
 import { useForm } from 'react-hook-form';
 
 
@@ -14,7 +14,7 @@ interface Vehicle {
 
 
 
-const VehicleRegister: React.FC = () => {
+const VehicleRegister: React.FC = ({ navigation }) => {
 
   const handleSubmit = async (data: Vehicle) => {
     try {
@@ -79,11 +79,45 @@ const VehicleRegister: React.FC = () => {
 
       <Button title='Criar' onPress={handleSubmit(vehicle)}/>
 
-    </View>  
+      <View style={footerStyles.container}>
+          <TouchableOpacity onPress={() => navigation.navigate('VehicleRegister')}>
+            <Image source={require('../../assets/icons/vehicle_register.png')} style={footerStyles.logo}/>
+          </TouchableOpacity>            
+          <TouchableOpacity onPress={() => navigation.navigate('VehicleList')}>
+            <Image source={require('../../assets/icons/vehicles.png')} style={footerStyles.logo}/>
+          </TouchableOpacity>          
+          <TouchableOpacity onPress={() => navigation.navigate('Dashboard')}>
+            <Image source={require('../../assets/icons/Space dashboard.png')} style={footerStyles.logo}/>
 
+          </TouchableOpacity>
+        </View>
+    </View>
   );
 };
 
+
+const footerStyles = StyleSheet.create({
+  container: {
+    alignSelf: 'baseline',
+    width: '100%',
+      flexDirection: 'row',
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#047857',
+      gap:8,
+      padding: 16
+    },
+  
+    title: {
+      fontSize: 20,
+      fontWeight: 'bold',
+      color: '#fff'
+    },
+    logo: {
+      width: 32,
+      height: 32,
+    }
+})
 
 const styles = StyleSheet.create({
   container: {
