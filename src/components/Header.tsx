@@ -5,7 +5,7 @@ const Header: React.FC = () => {
     return (
         <View style={styles.container}>
             <Image source={require('../../assets/icon.png')} style={styles.logo}/>
-            <Text style={styles.title}>FarmSight</Text>
+            <Text style={styles.title}>Voltup</Text>
         </View>
     )
 

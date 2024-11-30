@@ -14,7 +14,7 @@ const Dashboard: React.FC = () => {
   const [data, setData] = useState<Stations[]>([]);
 
   useEffect(() => {
-    // B
+
   }, []);
 
   const renderItem = ({ item }: { item: Stations }) => (
@@ -43,7 +43,9 @@ const Dashboard: React.FC = () => {
 
 const styles = StyleSheet.create({
   container: {
+    alignItems: 'center',
     flex: 1,
+    justifyContent: 'center'
   },
   title: {
     fontSize: 20,

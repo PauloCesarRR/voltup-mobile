@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FlatList, Text } from 'react-native';
+import { FlatList, Text, View } from 'react-native';
 
 const VehicleList = () => {
   const [vehicle, setVehicle] = useState([]);
@@ -31,12 +31,17 @@ const VehicleList = () => {
     <FlatList
       data={vehicle}
       renderItem={({ item }) => (
-        <Text>{item.marca}</Text>
-        <Text>{item.modelo}</Text>
-        <Text>{item.cor}</Text>
-        <Text>{item.conector}</Text>
-        <Button title="Deletar" onPress={() => handleDelete(item.id)} />
+        <View>
+         <Text>{item.marca}</Text>
+         <Text>{item.modelo}</Text>
+         <Text>{item.cor}</Text>
+         <Text>{item.conector}</Text>
+         <Button title="Deletar" onPress={() => handleDelete(item.id)} />
+        </View>
+
       )}
     />
   );
 };
+
+export default VehicleList

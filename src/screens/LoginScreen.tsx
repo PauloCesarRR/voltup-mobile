@@ -23,7 +23,7 @@ const Login: React.FC = ({ navigation }) => {
 
       <View style={styles.subcontainer}>
         <Image source={require('../../assets/icon.png')} style={styles.logo}/>
-        <Text style={styles.title}>FarmSight</Text>
+        <Text style={styles.title}>Voltup</Text>
       </View>
       
 
